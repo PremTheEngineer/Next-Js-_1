@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Footer from "@/Components/Footer/Footer";
-import HeaderMinimal from "@/Components/Header/HeaderMinimal";
+import Footer from "@/components/Footer/Footer";
+import HeaderMinimal from "@/components/Header/HeaderMinimal";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -15,9 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        <HeaderMinimal />
-        {children}
-        <Footer />
+      <HeaderMinimal />
+      {children}
+      <Footer />
     </>
   );
 }

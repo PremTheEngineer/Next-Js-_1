@@ -24,10 +24,10 @@ export function FoodCarousel(props: { data: CarouselItemsData[] }) {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="h-60 w-full"
+                  className="h-80 w-full"
                 />
               </div>
-              <p className="text-sm font-bold mb-4 text-center -mt-12">{item.name}</p>
+              <p className="text-sm font-bold mb-4 text-center -mt-16">{item.name}</p>
             </Card>
             </Link>
           </CarouselItem>

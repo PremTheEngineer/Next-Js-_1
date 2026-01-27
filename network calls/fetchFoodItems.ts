@@ -15,19 +15,21 @@
 //     return {data, isLoading, error, isError};
 // }
 
-import { fetchFoodItemRestaurants } from "@/lib/api"
-import { useQuery } from "@tanstack/react-query"
+import { fetchFoodItemRestaurants } from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
 
 interface UseFoodItemsByNameProps {
-  foodItem: string
+  foodItem: string;
+  location: string;
 }
 
 export const useFoodItemsByName = ({
   foodItem,
+  location,
 }: UseFoodItemsByNameProps) => {
   return useQuery({
-    queryKey: ["food-item-restaurants", foodItem],
-    queryFn: () => fetchFoodItemRestaurants(foodItem),
+    queryKey: ["food-item-restaurants", foodItem, location],
+    queryFn: () => fetchFoodItemRestaurants(foodItem, location),
     enabled: Boolean(foodItem),
-  })
-}
+  });
+};
