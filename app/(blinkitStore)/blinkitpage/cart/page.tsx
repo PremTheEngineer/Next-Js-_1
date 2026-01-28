@@ -1,6 +1,7 @@
 import { MoveLeftIcon } from 'lucide-react'
 import Link from 'next/link'
 import CartCheckoutTab from '../../components/cart/CartCheckoutTab'
+import TotalPriceTab from '../../components/cart/TotalPriceTab'
 
 function Cart() {
     return (
@@ -10,6 +11,9 @@ function Cart() {
             </div>
             <div className="flex justify-center">
                 <CartCheckoutTab  />
+            </div>
+            <div className='self-center'>
+                <TotalPriceTab />
             </div>
         </div>
     )
