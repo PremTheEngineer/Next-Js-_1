@@ -3,13 +3,12 @@ import {
   GROCERY_URL,
   HEADER_LOGO,
   HOMEPAGE_H1,
+  INSTAMART_PAGE,
   RESTAURANT_URL,
 } from "@/lib/constants";
 import { TypographyH1 } from "../ui/typographyH1";
 import { FeatureCard } from "./FeatureCard";
-import { Button } from "../ui/button";
 import Link from "next/link";
-import Logout from "@/app/(login)/logout/page";
 import LoginLogoutButton from "./LoginLogoutButton";
 
 export default function Header() {
@@ -21,7 +20,7 @@ export default function Header() {
         <div className="flex items-center">
           <div className="font-bold text-white">Swiggy Corporate</div>
           <div className="font-bold text-white ml-8">
-            <Link href={"/blinkitpage"}>Go to Blinkit</Link>
+            <Link href={INSTAMART_PAGE()}>Go to Instamart</Link>
           </div>
           <div className="font-bold text-white ml-8">
             <LoginLogoutButton/>

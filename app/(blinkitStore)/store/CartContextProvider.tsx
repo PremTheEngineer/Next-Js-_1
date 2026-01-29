@@ -25,7 +25,8 @@ function CartContextProvider({ children }: { children: React.ReactNode }) {
     //     };
     // }, []);
 
-    const [cart, setCart] = useState<CartState>({});
+    const [cart, setCart] = useState<CartState>({}); 
+    // Cart should never be undefined, it can be filled with items or can be an empty object...
 
     const add = (id: string) => {
         setCart(prev => ({ ...prev, [id]: 1 }));
@@ -50,7 +51,7 @@ function CartContextProvider({ children }: { children: React.ReactNode }) {
         })
     }
     return (
-        <CartContext.Provider value={{ cart, add, decrease, remove, increase }}>
+        <CartContext.Provider value={{ cart, add, decrease, remove, increase }}> 
             {children}
         </CartContext.Provider>
     )
