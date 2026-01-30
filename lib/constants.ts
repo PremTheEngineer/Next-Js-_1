@@ -18,7 +18,7 @@ export const LOGIN = () => "/login";
 export const FOOD = () => "/food";
 export const HOME = () => "/";
 export const SWIGGY_API =
-  "https://proxy.corsfix.com/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=";
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=";
 export const LOCATION_COORDINATES = {
   Delhi: {
     label: "Connaught Place",

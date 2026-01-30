@@ -16,12 +16,41 @@ const foodCollectionMap: Record<string, number> = {
 };
 
 export const apiGenerator = (foodItem: string, location: string) => {
-  console.log("fooditem and id", foodItem, foodCollectionMap[foodItem]);
+  // console.log("fooditem and id", foodItem, foodCollectionMap[foodItem]);
   type City = keyof typeof LOCATION_COORDINATES;
   const place = location as unknown as City;
   return `${SWIGGY_API}${LOCATION_COORDINATES[place].lat}&lng=${LOCATION_COORDINATES[place].lng}&collection=${foodCollectionMap[foodItem]}&tags=layout_CCS_${foodItem}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
 };
 
+export const apiGeneratorProd = (foodItem: string, location: string) => {
+  type City = keyof typeof LOCATION_COORDINATES;
+  const place = location as City;
+
+  const swiggyEndpoint =
+    `${SWIGGY_API}` +
+    `lat=${LOCATION_COORDINATES[place].lat}` +
+    `&lng=${LOCATION_COORDINATES[place].lng}` +
+    `&collection=${foodCollectionMap[foodItem]}` +
+    `&tags=layout_CCS_${foodItem}` +
+    `&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
+
+  return swiggyEndpoint;
+};
+
+export const fetchFoodItemRestaurantsProd = async (
+  foodItem: string,
+  location: string,
+) => {
+  const swiggyEndpoint = apiGenerator(foodItem, location);
+
+  const response = await axios.get("/api/swiggy", {
+    params: {
+      endpoint: swiggyEndpoint,
+    },
+  });
+
+  return response.data as SwiggyApiResponse;
+};
 export const fetchFoodItemRestaurants = async (
   foodItem: string,
   location: string,

@@ -15,7 +15,10 @@
 //     return {data, isLoading, error, isError};
 // }
 
-import { fetchFoodItemRestaurants } from "@/lib/api";
+import {
+  fetchFoodItemRestaurants,
+  fetchFoodItemRestaurantsProd,
+} from "@/lib/api";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 
 interface UseFoodItemsByNameProps {
@@ -29,7 +32,7 @@ export const useFoodItemsByName = ({
 }: UseFoodItemsByNameProps) => {
   return useQuery({
     queryKey: ["food-item-restaurants", foodItem, location],
-    queryFn: () => fetchFoodItemRestaurants(foodItem, location),
+    queryFn: () => fetchFoodItemRestaurantsProd(foodItem, location), // Prod function bypasses cors issue with cross end-point api
     enabled: Boolean(foodItem),
     placeholderData: keepPreviousData,
   });
