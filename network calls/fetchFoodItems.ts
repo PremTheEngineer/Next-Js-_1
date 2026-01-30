@@ -16,7 +16,7 @@
 // }
 
 import { fetchFoodItemRestaurants } from "@/lib/api";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 
 interface UseFoodItemsByNameProps {
   foodItem: string;
@@ -31,5 +31,6 @@ export const useFoodItemsByName = ({
     queryKey: ["food-item-restaurants", foodItem, location],
     queryFn: () => fetchFoodItemRestaurants(foodItem, location),
     enabled: Boolean(foodItem),
+    placeholderData: keepPreviousData,
   });
 };

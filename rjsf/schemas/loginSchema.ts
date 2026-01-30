@@ -138,13 +138,16 @@ export const LoginUiSchema: UiSchema = {
     "ui:widget": "EmailWidget",
     "ui:title": "Email address",
     "ui:options": {
-      classNames: "space-y-1",
+      classNames: "space-y-1  my-2",
     },
   },
 
   age: {
     "ui:widget": "UpDownWidget",
     "ui:title": "Age",
+    'ui:options': {
+      classNames: ' my-2'
+    }
   },
 
   gender: {
@@ -152,7 +155,7 @@ export const LoginUiSchema: UiSchema = {
     "ui:widget": "radio",
     "ui:options": {
       inline: true,
-      classNames: "flex gap-4",
+      classNames: "flex gap-4 my-2",
     },
   },
 

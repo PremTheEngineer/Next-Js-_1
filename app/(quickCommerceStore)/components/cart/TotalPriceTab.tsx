@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useCart } from "../../store/CartContextProvider";
 import { blinkitItemsById } from "../../lib/mockData";
 import Link from "next/link";
@@ -8,7 +8,11 @@ import { LOGIN } from "@/lib/constants";
 
 function TotalPriceTab() {
   const { cart } = useCart();
-  const user = localStorage.getItem("user");
+
+  const [user, setUser] = useState<string | null>(null);
+  useEffect(() => {
+    setUser(localStorage.getItem("user"));
+  }, []);
 
   if (!user) {
     return (
@@ -24,20 +28,11 @@ function TotalPriceTab() {
     );
   }
 
-  const userName = user.split(",").map((item) => {
-    const [key, val] = item.split(":");
-    if (key.includes("username")) {
-      return val.substring(1, val.length - 1);
-    } else {
-      return "";
-    }
-  });
+  const userName = JSON.parse(user).username;
 
-  const priceOfItems = useMemo(() => {
-    return Object.entries(cart).reduce((acc, [key, _]) => {
-      return acc + blinkitItemsById[key].price * _;
-    }, 0);
-  }, [cart]);
+  const priceOfItems = Object.entries(cart).reduce((acc, [key, _]) => {
+    return acc + blinkitItemsById[key].price * _;
+  }, 0);
 
   return priceOfItems ? (
     <div className="h-12 w-60 bg-yellow-300 flex flex-col items-center justify-center border border-neutral-500 p-4 m-4">

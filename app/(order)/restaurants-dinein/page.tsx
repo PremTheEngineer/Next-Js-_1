@@ -12,10 +12,13 @@ export default function Restaurants() {
         </h1>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {restaurantsList.map((restaurant) => (
+        {restaurantsList?.map((restaurant) => (
           <DineInRestaurantCard data={restaurant} key={restaurant.id} />
         ))}
       </div>
     </div>
   );
 }
+
+
+/* This page is static - Not connected to any API, couldnt find any : (  */

@@ -15,7 +15,6 @@ export default function HeaderMinimal() {
                     </div>
                     <div className="font-bold text-white ml-8">
                         <Button className="p-6 rounded-xl">Sign in</Button>
-
                     </div>
                 </div>
             </div>

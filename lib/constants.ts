@@ -16,3 +16,46 @@ export const CART_PAGE = () => "/quickCommercePage/cart";
 export const INSTAMART_PAGE = () => "/quickCommercePage/";
 export const LOGIN = () => "/login";
 export const FOOD = () => "/food";
+export const HOME = () => "/";
+export const SWIGGY_API =
+  "https://proxy.corsfix.com/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=";
+export const LOCATION_COORDINATES = {
+  Delhi: {
+    label: "Connaught Place",
+    lat: 28.6315,
+    lng: 77.2167,
+  },
+  Gurugram: {
+    label: "Cyber Hub",
+    lat: 28.494,
+    lng: 77.088,
+  },
+  Mumbai: {
+    label: "Bandra West",
+    lat: 19.0607,
+    lng: 72.8362,
+  },
+  Pune: {
+    label: "Hinjewadi",
+    lat: 18.5913,
+    lng: 73.7389,
+  },
+  Hyderabad: {
+    label: "HITEC City",
+    lat: 17.4483,
+    lng: 78.3915,
+  },
+  Kolkata: {
+    label: "Park Street",
+    lat: 22.5535,
+    lng: 88.35,
+  },
+  Chennai: {
+    label: "T. Nagar",
+    lat: 13.0418,
+    lng: 80.2337,
+  },
+} as const;
+export const HASH_SALT =
+  "m23y23su4pdh13e4r345s23hehsrgwrtgrwghehe45e245c436rfvsfgwergwrgrg347e54t848s8augl89t";
+export const HASH_ROUNDS = 5;

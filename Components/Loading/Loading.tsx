@@ -8,6 +8,7 @@ import {
   EmptyTitle,
 } from "@/components/ui/empty";
 import { Spinner } from "@/components/ui/spinner";
+import { HOME } from "@/lib/constants";
 import Link from "next/link";
 
 export function SpinnerEmpty() {
@@ -24,7 +25,7 @@ export function SpinnerEmpty() {
       </EmptyHeader>
       <EmptyContent>
         <Button variant="outline" size="sm">
-          <Link href="/">Cancel</Link>
+          <Link href={HOME()}>Cancel</Link>
         </Button>
       </EmptyContent>
     </Empty>

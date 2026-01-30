@@ -3,6 +3,7 @@
 import { SpinnerEmpty } from "@/components/Loading/Loading";
 import { RestaurantCard } from "@/components/RestaurantList/RestaurantCard";
 import { TypographyH1 } from "@/components/ui/typographyH1";
+import { HOME } from "@/lib/constants";
 import { useFoodItemsByName } from "@/network calls/fetchFoodItems";
 import Link from "next/link";
 import { use, useState } from "react";
@@ -29,7 +30,7 @@ export default function FoodItemRestaurant({
     return (
       <div className="fle flex-col justify-center items-center p-4 m-8">
         <p>Something went wrong... 🚨 </p>
-        <Link href="/"> Go back home </Link>
+        <Link href={HOME()}> Go back home </Link>
       </div>
     );
   }
@@ -38,7 +39,7 @@ export default function FoodItemRestaurant({
   return (
     <div className="p-8 flex flex-col gap-2">
       <div className="border-2 border-neutral-400 p-2 w-68 rounded-2xl">
-        Change location{" "}
+        Change location 
         <select
           value={location}
           onChange={(e) => setLocation(e.target.value)}
@@ -63,7 +64,8 @@ export default function FoodItemRestaurant({
           if (idx < 3) {
             return null;
           }
-          return <RestaurantCard data={card?.card?.card?.info} />;
+          const id = card?.card?.card?.info?.name;
+          return <RestaurantCard key={id} data={card?.card?.card?.info} />;
         })}
       </div>
     </div>
