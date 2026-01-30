@@ -1,6 +1,6 @@
-import DineInRestaurantCard from "@/components/RestaurantList/DineInRestaurantCard";
-import { RESTAURANT_BANNER } from "@/lib/constants";
-import { restaurantsList } from "@/lib/mockData";
+import DineInRestaurantCard from "../../../components/RestaurantList/DineInRestaurantCard";
+import { RESTAURANT_BANNER } from "../../../lib/constants";
+import { restaurantsList } from "../../../lib/mockData";
 
 export default function Restaurants() {
   return (

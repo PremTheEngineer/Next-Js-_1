@@ -1,4 +1,4 @@
-import LoginForm from "@/rjsf/form/LoginForm";
+import LoginForm from "../../../rjsf/form/LoginForm";
 import React from "react";
 
 function Login() {

@@ -1,6 +1,6 @@
-import Separator from "@/components/ui/separator";
-import { TypographyH1 } from "@/components/ui/typographyH1";
-import { HEADER_LOGO } from "@/lib/constants";
+import Separator from "../../../components/ui/separator";
+import { TypographyH1 } from "../../../components/ui/typographyH1";
+import { HEADER_LOGO } from "../../../lib/constants";
 
 export default function Footer() {
   return (

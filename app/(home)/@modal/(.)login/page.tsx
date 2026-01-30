@@ -1,8 +1,7 @@
 "use client";
 
-import LoginForm from "@/rjsf/form/LoginForm";
+import LoginForm from "../../../../rjsf/form/LoginForm"
 import { useRouter } from "next/navigation";
-import React from "react";
 
 function page() {
   const router = useRouter();

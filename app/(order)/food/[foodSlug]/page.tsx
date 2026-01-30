@@ -1,10 +1,10 @@
 "use client";
 
-import { SpinnerEmpty } from "@/components/Loading/Loading";
-import { RestaurantCard } from "@/components/RestaurantList/RestaurantCard";
-import { TypographyH1 } from "@/components/ui/typographyH1";
-import { HOME } from "@/lib/constants";
-import { useFoodItemsByName } from "@/network calls/fetchFoodItems";
+import { SpinnerEmpty } from "../../../../components/Loading/Loading";
+import { RestaurantCard } from "../../../../components/RestaurantList/RestaurantCard";
+import { TypographyH1 } from "../../../../components/ui/typographyH1";
+import { HOME } from "../../../../lib/constants";
+import { useFoodItemsByName } from "../../../../network calls/fetchFoodItems";
 import Link from "next/link";
 import { use, useState } from "react";
 

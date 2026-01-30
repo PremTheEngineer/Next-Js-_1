@@ -1,7 +1,7 @@
-import { FoodCarousel } from "@/components/Home/FoodCarousel";
+import { FoodCarousel } from "../../components/Home/FoodCarousel";
 import Link from "next/link";
-import { foodData, groceryData } from "@/lib/mockData";
-import { FOOD, INSTAMART_PAGE } from "@/lib/constants";
+import { foodData, groceryData } from "../../lib/mockData";
+import { FOOD, INSTAMART_PAGE } from "../../lib/constants";
 
 export default function Home() {
   return (
