@@ -1,6 +1,7 @@
 import axios from "axios";
 import { SwiggyApiResponse } from "./types";
 import { SWIGGY_API, LOCATION_COORDINATES } from "./constants";
+import { awaitedRestaurantsData, Restaurant, restaurantsListDynamicallyGenerated } from "./mockData";
 
 const foodCollectionMap: Record<string, number> = {
   Pizza: 83631,
@@ -28,7 +29,7 @@ export const apiGeneratorProd = (foodItem: string, location: string) => {
 
   const swiggyEndpoint =
     `${SWIGGY_API}` +
-    `lat=${LOCATION_COORDINATES[place].lat}` +
+    `${LOCATION_COORDINATES[place].lat}` +
     `&lng=${LOCATION_COORDINATES[place].lng}` +
     `&collection=${foodCollectionMap[foodItem]}` +
     `&tags=layout_CCS_${foodItem}` +
@@ -63,4 +64,30 @@ export const fetchFoodItemRestaurants = async (
     },
   });
   return response.data as SwiggyApiResponse;
+};
+
+
+interface FetchRestaurantsParams {
+  page: number;
+  pageSize: number;
+}
+
+export interface InfiniteRestaurantsResponse<T> {
+  dataToReturn: T[];
+  hasMore: boolean;
+  nextPage: number | null;
+}
+export const fetchInfiniteRestaurants = async (
+  { page, pageSize = 8 }: FetchRestaurantsParams
+): Promise<InfiniteRestaurantsResponse<Restaurant>> => {
+  const fullData = await awaitedRestaurantsData();
+
+  const startIdx = pageSize * (page - 1);
+  const endIdx = startIdx + pageSize;
+
+  return {
+    dataToReturn: fullData.slice(startIdx, endIdx),
+    hasMore: endIdx < fullData.length,
+    nextPage: endIdx < fullData.length ? page + 1 : null,
+  };
 };

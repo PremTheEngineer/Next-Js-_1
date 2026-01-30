@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Badge } from "../ui/badge";
+import clsx from 'clsx';
+import { cn } from "@/lib/utils"
 
 interface RestaurantData {
     data: {
@@ -11,7 +13,7 @@ interface RestaurantData {
         costForTwo: string,
         distance: string,
         address: string,
-        offer: string,
+        offer?: string,
     }
 }
 
@@ -42,8 +44,8 @@ export default function DineInRestaurantCard({ data }:  RestaurantData) {
                 </p>
             </CardContent>
             <CardFooter>
-                <div className="w-full border-2 rounded-xl border-green-400 p-2 bg-green-200">
-                    {data.offer}
+                <div className={cn("w-full border-2 rounded-xl border-green-400 p-2 bg-green-200", {"bg-red-200 border-red-400" : data.offer==undefined})}>
+                    {data.offer ?? "No offers running"}
                 </div>
             </CardFooter>
         </Card>

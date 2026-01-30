@@ -59,3 +59,10 @@ export const LOCATION_COORDINATES = {
 export const HASH_SALT =
   "m23y23su4pdh13e4r345s23hehsrgwrtgrwghehe45e245c436rfvsfgwergwrgrg347e54t848s8augl89t";
 export const HASH_ROUNDS = 5;
+export const VEGGIES_PNG = () =>
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png";
+export const SUSHI_PNG = () =>
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png";
+
+
+export const RESTAURANT_IMAGES: string[] = ["https://images.pexels.com/photos/10990568/pexels-photo-10990568.jpeg", "https://images.pexels.com/photos/31629168/pexels-photo-31629168.jpeg", "https://images.pexels.com/photos/3152533/pexels-photo-3152533.jpeg", "https://images.pexels.com/photos/8585881/pexels-photo-8585881.jpeg", "https://images.pexels.com/photos/16021235/pexels-photo-16021235.jpeg", "https://images.pexels.com/photos/9330580/pexels-photo-9330580.jpeg", "https://images.pexels.com/photos/10520478/pexels-photo-10520478.jpeg", "https://images.pexels.com/photos/30541218/pexels-photo-30541218.jpeg", "https://images.pexels.com/photos/14339365/pexels-photo-14339365.jpeg", "https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg", "https://images.pexels.com/photos/762029/pexels-photo-762029.jpeg", "https://images.pexels.com/photos/19085991/pexels-photo-19085991.jpeg", "https://images.pexels.com/photos/33233564/pexels-photo-33233564.jpeg", "https://images.pexels.com/photos/10110713/pexels-photo-10110713.jpeg", "https://images.pexels.com/photos/34692789/pexels-photo-34692789.jpeg", "https://images.pexels.com/photos/4997875/pexels-photo-4997875.jpeg", "https://images.pexels.com/photos/32754756/pexels-photo-32754756.jpeg", "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg", "https://images.pexels.com/photos/35505245/pexels-photo-35505245.jpeg", "https://images.pexels.com/photos/28999499/pexels-photo-28999499.jpeg"];

@@ -1,4 +1,4 @@
-import { RESTAURANT_IMAGE } from "./constants";
+import { RESTAURANT_IMAGE, RESTAURANT_IMAGES } from "./constants";
 
 export interface CarouselItemsData {
   type: string;
@@ -2770,6 +2770,96 @@ export const restaurantsList = [
     offer: "20% OFF up to ₹150",
   },
 ];
+
+export interface Restaurant {
+  id: string;
+  name: string;
+  image: string;
+  costForTwo: string;
+  distance: string;
+  address: string;
+  offer?: string;
+}
+
+const RESTAURANT_NAMES = [
+  "Spice Junction",
+  "Urban Tandoor",
+  "Biryani Blues",
+  "Curry Craft",
+  "Masala Street",
+  "Royal Handi",
+  "Desi Zaika",
+  "The Kebab Club",
+  "Flavour Factory",
+  "Tandoori Tales",
+  "Punjab Grill",
+  "Khaati Peeti Rasoi",
+  "Dilli Darbar",
+  "The Mughal Table",
+  "Handi Express",
+  "Swaad Bhavan",
+  "Zaika-e-Dilli",
+  "Nizam’s Kitchen",
+  "The Spice Route",
+  "Charcoal Eats",
+];
+
+const DELHI_LOCATIONS = [
+  "Connaught Place",
+  "Karol Bagh",
+  "Rajouri Garden",
+  "Dwarka Sector 10",
+  "Saket",
+  "Lajpat Nagar",
+  "Pitampura",
+  "Rohini Sector 7",
+  "Vasant Kunj",
+  "Janakpuri",
+  "Mayur Vihar",
+  "Preet Vihar",
+  "Kalkaji",
+  "Malviya Nagar",
+  "Civil Lines",
+  "Punjabi Bagh",
+  "Ashok Vihar",
+  "Model Town",
+  "Green Park",
+  "Greater Kailash",
+];
+
+const OFFERS = [
+  "20% OFF up to ₹120",
+  "Flat ₹100 OFF",
+  "BUY 1 GET 1",
+  "10% OFF with Bank",
+  "Free Delivery above ₹300 order",
+  undefined,
+  undefined,
+];
+
+export const restaurantsListDynamicallyGenerated: Restaurant[] = Array.from(
+  { length: 200 },
+  (_, i) => ({
+    id: `res-${1000 + i}`,
+    name: `${RESTAURANT_NAMES[i % RESTAURANT_NAMES.length]} ${
+      Math.floor(i / RESTAURANT_NAMES.length) + 1
+    }`,
+    image: RESTAURANT_IMAGES[i % RESTAURANT_IMAGES.length],
+    costForTwo: `₹${250 + (i % 6) * 100} for two`,
+    distance: `${(0.8 + (i % 6) * 0.5).toFixed(1)} km`,
+    address: DELHI_LOCATIONS[i % DELHI_LOCATIONS.length],
+    offer: OFFERS[i % OFFERS.length],
+  }),
+);
+
+export const awaitedRestaurantsData = async () => {
+  await new Promise((res, rej) => {
+    setTimeout(() => {
+      res("hahahaha");
+    }, 2500);
+  });
+  return restaurantsListDynamicallyGenerated;
+};
 
 export const cuisinesList: string[] = [
   "North Indian",

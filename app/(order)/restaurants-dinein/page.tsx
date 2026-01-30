@@ -1,6 +1,10 @@
 import DineInRestaurantCard from "../../../components/restaurantList/DineInRestaurantCard";
 import { RESTAURANT_BANNER } from "../../../lib/constants";
-import { restaurantsList } from "../../../lib/mockData";
+import {
+  restaurantsList,
+  restaurantsListDynamicallyGenerated,
+} from "../../../lib/mockData";
+import InfiniteRestaurant from "./InfiniteRestaurant";
 
 export default function Restaurants() {
   return (
@@ -11,11 +15,7 @@ export default function Restaurants() {
           Explore Top Dining Out Restaurants in Delhi
         </h1>
       </div>
-      <div className="grid grid-cols-4 gap-4">
-        {restaurantsList?.map((restaurant) => (
-          <DineInRestaurantCard data={restaurant} key={restaurant.id} />
-        ))}
-      </div>
+      <InfiniteRestaurant />
     </div>
   );
 }
