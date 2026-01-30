@@ -1,9 +1,9 @@
-import { FoodCarousel } from "../../../components/Home/FoodCarousel";
+import { FoodCarousel } from "../../../components/home/FoodCarousel";
 import { foodData, cuisinesList } from "../../../lib/mockData";
 
 export default function FoodPage() {
   return (
-    <div className="flex-flex-col gap-4 px-40">           
+    <div className="flex-flex-col gap-4 px-40">
       <div className="p-4 my-4">
         <h2 className="text-xl font-bold cursor-pointer mb-2">
           What's on your mind

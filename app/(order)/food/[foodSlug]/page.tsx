@@ -1,7 +1,7 @@
 "use client";
 
-import { SpinnerEmpty } from "../../../../components/Loading/Loading";
-import { RestaurantCard } from "../../../../components/RestaurantList/RestaurantCard";
+import { SpinnerEmpty } from "../../../../components/loading/Loading";
+import { RestaurantCard } from "../../../../components/restaurantList/RestaurantCard";
 import { TypographyH1 } from "../../../../components/ui/typographyH1";
 import { HOME } from "../../../../lib/constants";
 import { useFoodItemsByName } from "../../../../network calls/fetchFoodItems";
@@ -39,7 +39,7 @@ export default function FoodItemRestaurant({
   return (
     <div className="p-8 flex flex-col gap-2">
       <div className="border-2 border-neutral-400 p-2 w-68 rounded-2xl">
-        Change location 
+        Change location
         <select
           value={location}
           onChange={(e) => setLocation(e.target.value)}

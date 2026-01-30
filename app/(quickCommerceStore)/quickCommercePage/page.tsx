@@ -23,7 +23,7 @@
 "use client";
 import ItemCard from "../components/ItemCard";
 import { getAwaitedBlinkitData } from "../lib/mockData";
-import { SpinnerEmpty } from "../../../components/Loading/Loading";
+import { SpinnerEmpty } from "../../../components/loading/Loading";
 import { useQuery } from "@tanstack/react-query";
 
 export default function BlinkitStore() {

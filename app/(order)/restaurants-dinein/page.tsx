@@ -1,4 +1,4 @@
-import DineInRestaurantCard from "../../../components/RestaurantList/DineInRestaurantCard";
+import DineInRestaurantCard from "../../../components/restaurantList/DineInRestaurantCard";
 import { RESTAURANT_BANNER } from "../../../lib/constants";
 import { restaurantsList } from "../../../lib/mockData";
 
@@ -19,6 +19,5 @@ export default function Restaurants() {
     </div>
   );
 }
-
 
 /* This page is static - Not connected to any API, couldnt find any : (  */
