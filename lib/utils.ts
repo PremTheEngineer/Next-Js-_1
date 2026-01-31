@@ -4,3 +4,7 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+export const getRestaurantName = (obj: {restaurantId: string}) => {
+  return  obj.restaurantId.split("%20").join(" ");
+}

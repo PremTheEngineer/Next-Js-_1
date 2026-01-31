@@ -2861,6 +2861,119 @@ export const awaitedRestaurantsData = async () => {
   return restaurantsListDynamicallyGenerated;
 };
 
+export type MenuItem = {
+  id: string;
+  name: string;
+  price: number;
+  isVeg: boolean;
+};
+
+export type RestaurantMenu = {
+  starters: MenuItem[];
+  drinks: MenuItem[];
+  mainCourse: MenuItem[];
+  sweets: MenuItem[];
+};
+
+// simple deterministic hash
+const hashString = (str: string) =>
+  str.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+
+// seeded random
+const seededRandom = (seed: number) => {
+  let value = seed % 2147483647;
+  return () => {
+    value = (value * 48271) % 2147483647;
+    return value / 2147483647;
+  };
+};
+
+export const randomMenuGenerator = (
+  restaurantName: string
+): RestaurantMenu => {
+  const seed = hashString(restaurantName);
+  const random = seededRandom(seed);
+
+  const startersPool = [
+    { name: "Paneer Tikka", isVeg: true },
+    { name: "Veg Spring Roll", isVeg: true },
+    { name: "Chicken Tikka", isVeg: false },
+    { name: "Chicken Lollipop", isVeg: false },
+    { name: "Hara Bhara Kabab", isVeg: true },
+    { name: "Malai Chaap", isVeg: true },
+    { name: "Samosa", isVeg: true },
+    { name: "French Fries", isVeg: true },
+    { name: "Fish Fingers", isVeg: false },
+  ];
+
+  const drinksPool = [
+    { name: "Cold Coffee", isVeg: true },
+    { name: "Fresh Lime Soda", isVeg: true },
+    { name: "Masala Chaas", isVeg: true },
+    { name: "Coke", isVeg: true },
+    { name: "Mango Shake", isVeg: true },
+    { name: "Pinacolada (contains alcohol)", isVeg: true },
+    { name: "Gin Mocktail (contains alcohol)", isVeg: true },
+    { name: "Sex on the Beach (contains alcohol)", isVeg: true },
+    { name: "Mango Shake", isVeg: true },
+  ];
+
+  const mainCoursePool = [
+    { name: "Paneer Butter Masala", isVeg: true },
+    { name: "Dal Makhani", isVeg: true },
+    { name: "Butter Chicken", isVeg: false },
+    { name: "Chicken Biryani", isVeg: false },
+    { name: "Veg Biryani", isVeg: true },
+    { name: "Kadai Chicken", isVeg: false },
+    { name: "Mix Veg", isVeg: true },
+    { name: "Matar Mushroom", isVeg: true },
+    { name: "Palak Paneer", isVeg: true },
+    { name: "Lasagna", isVeg: true },
+  ];
+
+  const sweetsPool = [
+    { name: "Gulab Jamun", isVeg: true },
+    { name: "Rasgulla", isVeg: true },
+    { name: "Jalebi", isVeg: true },
+    { name: "Rabri", isVeg: true },
+    { name: "Ice Cream", isVeg: true },
+    { name: "Brownie with Ice Cream", isVeg: true },
+    { name: "Kheer", isVeg: true },
+  ];
+
+  const generateItems = (
+    pool: { name: string; isVeg: boolean }[],
+    min: number,
+    max: number,
+    priceRange: [number, number]
+  ): MenuItem[] => {
+    const count = Math.floor(random() * (max - min + 1)) + min;
+
+    return Array.from({ length: count }, (_, i) => {
+      const item = pool[Math.floor(random() * pool.length)];
+      const price =
+        Math.floor(
+          random() * (priceRange[1] - priceRange[0])
+        ) + priceRange[0];
+
+      return {
+        id: `${restaurantName}-${item.name}-${i}`.replace(/\s+/g, "-"),
+        name: item.name,
+        price,
+        isVeg: item.isVeg,
+      };
+    });
+  };
+
+  return {
+    starters: generateItems(startersPool, 3, 6, [150, 300]),
+    drinks: generateItems(drinksPool, 2, 8, [80, 180]),
+    mainCourse: generateItems(mainCoursePool, 5, 20, [220, 450]),
+    sweets: generateItems(sweetsPool, 2, 8, [100, 220]),
+  };
+};
+
+
 export const cuisinesList: string[] = [
   "North Indian",
   "South Indian",
@@ -2903,3 +3016,4 @@ export const cuisinesList: string[] = [
   "Vegan",
   "Beverages",
 ];
+

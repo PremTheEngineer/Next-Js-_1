@@ -23,7 +23,7 @@ function InfiniteRestaurant() {
   const handleScroll = () => {
     const bottom =
       window.innerHeight + window.scrollY >=
-      document.documentElement.scrollHeight - 1;
+      document.documentElement.scrollHeight;
     if (bottom && hasNextPage && !isFetchingNextPage) {
       fetchNextPage();
     }
