@@ -5,6 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export const getRestaurantName = (obj: {restaurantId: string}) => {
+export const getSpacedName = (obj: {restaurantId: string}) => {
   return  obj.restaurantId.split("%20").join(" ");
 }

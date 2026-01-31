@@ -15,7 +15,7 @@ function page() {
 
       {/* Modal box */}
       <div className="relative z-10 w-105 rounded-xl bg-white p-6 shadow-xl">
-        <h2 className="mb-4 text-lg font-semibold">Sign in</h2>
+        <h2 className="mb-4 text-lg font-semibold text-center">Welcome to our platform</h2>
 
         <LoginForm />
 

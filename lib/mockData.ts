@@ -2856,7 +2856,7 @@ export const awaitedRestaurantsData = async () => {
   await new Promise((res, rej) => {
     setTimeout(() => {
       res("hahahaha");
-    }, 2500);
+    }, 1500);
   });
   return restaurantsListDynamicallyGenerated;
 };
@@ -2888,9 +2888,7 @@ const seededRandom = (seed: number) => {
   };
 };
 
-export const randomMenuGenerator = (
-  restaurantName: string
-): RestaurantMenu => {
+export const randomMenuGenerator = (restaurantName: string): RestaurantMenu => {
   const seed = hashString(restaurantName);
   const random = seededRandom(seed);
 
@@ -2945,16 +2943,14 @@ export const randomMenuGenerator = (
     pool: { name: string; isVeg: boolean }[],
     min: number,
     max: number,
-    priceRange: [number, number]
+    priceRange: [number, number],
   ): MenuItem[] => {
     const count = Math.floor(random() * (max - min + 1)) + min;
 
     return Array.from({ length: count }, (_, i) => {
       const item = pool[Math.floor(random() * pool.length)];
       const price =
-        Math.floor(
-          random() * (priceRange[1] - priceRange[0])
-        ) + priceRange[0];
+        Math.floor(random() * (priceRange[1] - priceRange[0])) + priceRange[0];
 
       return {
         id: `${restaurantName}-${item.name}-${i}`.replace(/\s+/g, "-"),
@@ -2973,24 +2969,23 @@ export const randomMenuGenerator = (
   };
 };
 
-
 export const cuisinesList: string[] = [
   "North Indian",
-  "South Indian",
-  "Mughlai",
-  "Biryani",
-  "Hyderabadi",
   "Punjabi",
+  "South Indian",
   "Rajasthani",
   "Gujarati",
   "Bengali",
+  "Hyderabadi",
+  "Indo-Chinese",
+  "Mughlai",
+  "Thai",
+  "Biryani",
   "Maharashtrian",
   "Street Food",
   "Fast Food",
   "Chinese",
-  "Indo-Chinese",
   "Asian",
-  "Thai",
   "Japanese",
   "Korean",
   "Italian",
@@ -3016,4 +3011,3 @@ export const cuisinesList: string[] = [
   "Vegan",
   "Beverages",
 ];
-

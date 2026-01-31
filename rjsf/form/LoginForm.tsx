@@ -76,6 +76,22 @@ function LoginForm() {
       />
     );
   }, []);
+  const CustomCheckboxWidget = useCallback((props: WidgetProps) => {
+    const { id, value, onChange, required } = props;
+    return (
+      <>
+        <label htmlFor={id}>New user? </label>
+        <input
+          type="checkbox"
+          id={id}
+          checked={!!value}
+          required={required}
+          className="p-2 m-2"
+          onChange={(e) => onChange(e.target.checked)}
+        />
+      </>
+    );
+  }, []);
   const errorListTemplate = () => {
     return null;
   };
@@ -85,6 +101,7 @@ function LoginForm() {
     PasswordWidget: CustomPasswordWidget,
     EmailWidget: CustomEmailWidget,
     UpDownWidget: CustomAgeWidget,
+    CheckboxWidget: CustomCheckboxWidget,
   };
 
   const handleChange = useCallback(

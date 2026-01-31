@@ -44,18 +44,18 @@ export const LoginSchema: RJSFSchema = {
               title: "Username",
             },
             email: {
-                type: "string",
-                format: "email",
-                title: "Email",
+              type: "string",
+              format: "email",
+              title: "Email",
             },
             age: {
-                type: "integer",
-                title: "Age",
+              type: "integer",
+              title: "Age",
             },
             gender: {
-                type: "string",
-                enum: ["Male", "Female", "Other"],
-                title: "Gender",
+              type: "string",
+              enum: ["Male", "Female", "Other"],
+              title: "Gender",
             },
             password: {
               type: "string",
@@ -117,8 +117,6 @@ export const LoginUiSchema: UiSchema = {
     "ui:title": "Username",
     "ui:autocomplete": "on",
     "ui:autofocus": true,
-    "ui:help":
-      "Enter your username, this will be your unique identity on our platform",
     "ui:options": {
       classNames: "space-y-1",
     },
@@ -128,7 +126,6 @@ export const LoginUiSchema: UiSchema = {
     "ui:widget": "password",
     "ui:title": "Password",
     "ui:autocomplete": "on",
-    "ui:help": "Please enter your password",
     "ui:options": {
       classNames: "space-y-1",
     },
@@ -145,9 +142,9 @@ export const LoginUiSchema: UiSchema = {
   age: {
     "ui:widget": "UpDownWidget",
     "ui:title": "Age",
-    'ui:options': {
-      classNames: ' my-2'
-    }
+    "ui:options": {
+      classNames: " my-2",
+    },
   },
 
   gender: {
