@@ -4,7 +4,7 @@ import {
   restaurantsList,
   restaurantsListDynamicallyGenerated,
 } from "../../../lib/mockData";
-import InfiniteRestaurant from "../../../components/restaurantList/InfiniteRestaurant";
+import InfiniteRestaurant from "./InfiniteRestaurant";
 
 export default function Restaurants() {
   return (

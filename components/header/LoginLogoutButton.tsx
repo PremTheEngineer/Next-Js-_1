@@ -2,18 +2,19 @@
 
 import { Button } from "../ui/button";
 import Link from "next/link";
-import Logout from "@/app/(login)/logout/page";
 import { LOGIN } from "@/lib/constants";
-import { useEffect, useState } from "react";
+import { useAuth } from "@/providers/authProvider";
 
 export default function LoginLogoutButton() {
-  const [user, setUser] = useState<string | null>(null);
-  useEffect(() => {
-    setUser(localStorage.getItem("user"));
-  }, []);
+  const { user, logout } = useAuth();
+
   return (
     <Button className="p-6 rounded-xl">
-      {user ? <Logout /> : <Link href={LOGIN()}>Log in</Link>}
+      {user ? (
+        <button onClick={logout}>Logout</button>
+      ) : (
+        <Link href={LOGIN()}>Log in</Link>
+      )}
     </Button>
   );
 }

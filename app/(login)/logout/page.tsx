@@ -1,5 +1,7 @@
 "use client";
 
+import { redirect } from "next/navigation";
+
 function Logout() {
   return (
     <div
@@ -7,7 +9,7 @@ function Logout() {
         localStorage.removeItem("user");
       }}
     >
-        Logout
+      Logout
     </div>
   );
 }

@@ -3011,3 +3011,115 @@ export const cuisinesList: string[] = [
   "Vegan",
   "Beverages",
 ];
+
+export const cuisineObject = {
+  "North Indian": {
+    images: [
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950",
+      "https://images.unsplash.com/photo-1589778655375-3e622a9fc91c?q=80&w=2631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1628294896516-344152572ee8",
+    ],
+    cuisines: ["Butter Chicken", "Dal Makhani", "Paneer Butter Masala"],
+    history:
+      "North Indian cuisine is known for its rich gravies, use of dairy like butter and cream, and robust spices. It evolved under Mughal influence and is widely popular across India.",
+  },
+
+  Punjabi: {
+    images: [
+      "https://media.istockphoto.com/id/1077209466/photo/makki-di-roti-with-sarson-ka-saag-popular-punjabi-main-course-recipe-in-winters-made-using.jpg?s=2048x2048&w=is&k=20&c=psYpc9qNNhMkVEFADBA0HvE7tJczdfMczttggqY0itY=",
+      "https://media.istockphoto.com/id/1364975940/photo/indian-ethnic-food-buffet-on-white-concrete-table-from-above.webp?a=1&b=1&s=612x612&w=0&k=20&c=5bPHoiFh9nvsKD5QbbsgonOBQfxWS3jQ0qIFvf0GhZ0=",
+      "https://media.istockphoto.com/id/996188546/photo/assorted-indian-food-for-lunch-or-dinner-rice-lentils-paneer-dal-makhani-naan-chutney-spices.webp?a=1&b=1&s=612x612&w=0&k=20&c=kzBXPs_2haEsttmgDHhAMVsHVzYss8OPOkcX-wAMeaE=",
+    ],
+    cuisines: ["Chole Bhature", "Sarson da Saag", "Amritsari Kulcha"],
+    history:
+      "Punjabi cuisine originated from the fertile lands of Punjab. It is hearty, flavourful, and filling, reflecting the agricultural lifestyle of the region.",
+  },
+
+  "South Indian": {
+    images: [
+      "https://images.unsplash.com/photo-1630383249896-424e482df921",
+      "https://images.unsplash.com/photo-1589302168068-964664d93dc0",
+      "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c291dGglMjBpbmRpYW4lMjBmb29kfGVufDB8fDB8fHww",
+    ],
+    cuisines: ["Dosa", "Idli Sambar", "Uttapam"],
+    history:
+      "South Indian cuisine is characterised by rice-based dishes, fermented batters, coconut, and tangy flavours. It is light, nutritious, and deeply rooted in temple culture.",
+  },
+
+  Rajasthani: {
+    images: [
+      "https://images.pexels.com/photos/32044742/pexels-photo-32044742.jpeg",
+      "https://images.pexels.com/photos/5775684/pexels-photo-5775684.jpeg",
+      "https://imgs.search.brave.com/yN4Ev-X6bLY6QNqVVglMjtYFjJuzyMx8D1dzcbBS4Jg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuamRtYWdpY2Jv/eC5jb20vY29tcC9k/ZWZfY29udGVudC9k/YWFsLWJhdGktcmVz/dGF1cmFudHMvNS1k/YWFsLWJhdGktcmVz/dGF1cmFudHMtNS0w/bnA5OC0yNTAuanBn/P3c9Mzg0MCZxPTc1",
+    ],
+    cuisines: ["Dal Baati Churma", "Gatte ki Sabzi", "Ker Sangri"],
+    history:
+      "Rajasthani cuisine developed in arid conditions and focuses on food with longer shelf life. It uses gram flour, ghee, and dry spices extensively.",
+  },
+
+  Gujarati: {
+    images: [
+      "https://imgs.search.brave.com/jyh__L7Ka7wO14SIbCT0LuScxctNN1z9b-PPvDA6eLU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dXJ1/aGkuY29tL3Jlc291/cmNlcy93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMy8wOC9UaGUt/UmljaC1GbGF2b3Jz/LW9mLUd1amFyYXRp/LUZvb2QtSGVyaXRh/Z2UtS2hhbWFuLVR1/cnVoaS5qcGc",
+      "https://imgs.search.brave.com/q4Sr2tKkoXL5qca2wU3G7WjIHduNmoZtvljSChfHvfc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dXJ1/aGkuY29tL3Jlc291/cmNlcy93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMy8wOC9UaGUt/UmljaC1GbGF2b3Jz/LW9mLUd1amFyYXRp/LUZvb2QtSGVyaXRh/Z2UtS2hhbmR2aS1U/dXJ1aGkuanBn",
+      "https://imgs.search.brave.com/E9DS_BVqgOjCL79056Kf8rRB0TpIcv4QPyHLzyz2QDk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzE4LzU1LzI0Lzk5/LzM2MF9GXzE4NTUy/NDk5NTZfNUhTZVhj/b0VjTXhuNjgyTUJ4/alRtSm5HV3g1cklt/cUYuanBn",
+    ],
+    cuisines: ["Dhokla", "Undhiyu", "Thepla"],
+    history:
+      "Gujarati cuisine is predominantly vegetarian and known for its sweet, salty, and spicy balance. It reflects the cultural emphasis on simplicity and nutrition.",
+  },
+
+  Bengali: {
+    images: [
+      "https://imgs.search.brave.com/Nx-_FQfwuw7POLDW46apCVLx2ctBDREqDhfi7fdwGlA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIx/ODgzODQwNC9waG90/by90cmFkaXRpb25h/bC1iZW5nYWxpLWZv/b2QtdG8tY2VsZWJy/YXRlLWJlbmdhbGkt/bmV3LXllYXIuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVdW/R3loaHBrNGptaHBR/QUNES3ZpUzFtX0w5/RW1SaHdKUURZcnJN/b2xCRE09",
+      "https://imgs.search.brave.com/weMHyqiAxuaeXV8kubCCo7AxPZZmgZFZftJjPf2ROl8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTUv/OTMzLzc5OC9zbWFs/bC9jaG9sYXItZGFs/LWFuZC1wYXRvbC1h/bG9vLXNhYnppLXNl/cnZlZC13aXRoLWZy/aWVkLWx1Y2hpLW9y/LXBvb3JpLWJlbmdh/bGktZm9vZC1mcmVl/LXBob3RvLmpwZw",
+      "https://imgs.search.brave.com/7ErxfojOAUcNaND0kXJMloLaGohUIQXpSs6NUyLUmeY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQz/NTc1ODE4NC9waG90/by9jaHVtLWNodW0u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVVLaWVxTDhBRjk0/QlExRm1ZbTZUZHJM/NVZKWHNGOU9VYkdB/S2xtMjRlZ2s9",
+    ],
+    cuisines: ["Fish Curry", "Shorshe Ilish", "Mishti Doi"],
+    history:
+      "Bengali cuisine is famous for its love of fish, rice, and subtle spice blends. Mustard oil and sweets play a central role in its culinary identity.",
+  },
+
+  Hyderabadi: {
+    images: [
+      "https://imgs.search.brave.com/Cd4M1bZI-JHL8-aRCK-71aKmkRXVIRsgXzV2B7m7yFA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjM5/NzA0MDIwL3Bob3Rv/L2h5ZGVyYWJhZGkt/YmlyeWFuaS1pcy1h/LWZvcm0tb2YtYmly/eWFuaS1mcm9tLWh5/ZGVyYWJhZC1pbmRp/YS1pdC1pcy1wcmVw/YXJlZC1pbi10aGUt/Zm9ybS1vZi5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VW5a/TE5Ca3pWc2ZuTkhL/R3FfcVhjZmhOOEVz/OWpXSGhac0JUS2l3/V3d2cz0",
+      "https://imgs.search.brave.com/ZoQWgikDMgns7a3Nwddz7l5KDpd59vgvaF3b4B8mmig/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mbG93/ZXJhdXJhLWJsb2ct/aW1nLnMzLmFwLXNv/dXRoLTEuYW1hem9u/YXdzLmNvbS9jYWtl/LWJsb2ctMjMvZHVt/LXB1a2h0LWZvb2Qt/aW4taHlkZXJhYmFk/LmpwZw",
+      "https://imgs.search.brave.com/MP524ovCoWFN2V2EAx0z_OfKvnFcSWJwWwdGUmZs-PU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTUy/NjkwMjE1L3Bob3Rv/L2luZGlhbi1zYW1v/c2FzLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1JbG9Tc0s4/ZmxkVUxkeEFYVlJy/OXdORDVzRXhpOUF1/bFlFOUVvVUxzcFFr/PQ",
+    ],
+    cuisines: ["Hyderabadi Biryani", "Mirchi ka Salan", "Double ka Meetha"],
+    history:
+      "Hyderabadi cuisine is a blend of Mughlai and Telugu traditions. It is known for aromatic biryanis, slow cooking, and rich use of nuts and spices.",
+  },
+
+  "Indo-Chinese": {
+    images: [
+      "https://imgs.search.brave.com/RKdlEtaym39Qa7KPwGeBV2JY_G7bIWJ9WtiY7lsfHsU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi92ZWct/bWFuY2h1cmlhbi1w/b3B1bGFyLWluZG8t/Y2hpbmVzZS1mb29k/LW1hZGUtY2F1bGlm/bG93ZXItZmxvcmV0/cy1vdGhlci12ZWdl/dGFibGUtc2VydmVk/LW92ZXItcnVzdGlj/LXdvb2Rlbi10YWJs/ZS0yMjU3ODk2MzAu/anBn",
+      "https://imgs.search.brave.com/-cSse51M0LEcMwBIOmJx_3Ab8Ocg1H0fKxagG25mAow/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTM0/NDgyMDYzL3Bob3Rv/L2FzaWFuLWZ1c2lv/bi5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9ZHNmUDcxSWhT/TGVUUVViN2VybGNB/dXRXanFMOGtTV3hy/OTBTR2pPM3NKYz0",
+      "https://imgs.search.brave.com/i7pLtMsCqH5tdnAFOQ2A81frVa4_qvVcIXGNNieh7m4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vc3R1cmZy/eWJveC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjIvMDIv/Y2hpbGxpLXBhbmVl/ci1kcnktaXMtbWFk/ZS11c2luZy1jb3R0/YWdlLWNoZWVzZS1p/bmRvLWNoaW5lc2Ut/Zm9vZC0xLmpwZz9y/ZXNpemU9MTAyNCw2/ODMmc3NsPTE",
+    ],
+    cuisines: ["Hakka Noodles", "Manchurian", "Chilli Chicken"],
+    history:
+      "Indo-Chinese cuisine originated from Chinese immigrants in Kolkata. It blends Chinese techniques with Indian spices, creating bold and spicy flavours.",
+  },
+
+  Mughlai: {
+    images: [
+      "https://imgs.search.brave.com/NJx3EviZQF11SSK9KhSMWpPCgFVv1I6bn3bR_uyCOfc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMudGVsZWdyYXBo/aW5kaWEuY29tL3Rl/bGVncmFwaC8yMDI0/L0Fwci8xNzEyOTMy/ODI0X2Ntcy05Lmpw/Zw",
+      "https://imgs.search.brave.com/mVhQcdTR6lja4YGfsYYz0bv6DhnFmKqiEFY4fJ9I17o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdXph/bm5ld2FuZGVyc2Rl/bGhpLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNC8wMS9T/dXphbm5lV2FuZGVy/c0RlbGhpLTIwMjUt/MDQtMTNUMTE1MTA1/LjM5Mi5qcGc",
+      "https://imgs.search.brave.com/8x_PVdfORyp39hLzzU880fneYZxfTSdae3844SNF1t0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5hc3NldHR5cGUu/Y29tL2RlbGhpd2Fu/dHMvMjAyNC0wOS0y/Mi9sOG50YnNsei9C/ZXN0LXBsYWNlcy1m/b3ItTXVnaGxhaS1m/b29kLWluLVNvdXRo/LURlbGhpMS5QTkc_/dz00ODAmYXV0bz1m/b3JtYXQsY29tcHJl/c3MmZml0PW1heA",
+    ],
+    cuisines: ["Korma", "Nihari", "Seekh Kebabs"],
+    history:
+      "Mughlai cuisine was developed in royal kitchens during the Mughal era. It is rich, aromatic, and known for slow-cooked meats and luxurious gravies.",
+  },
+
+  Thai: {
+    images: [
+      "https://imgs.search.brave.com/PhY4Vo5bp1znox3UgYfKHHTLFC4Tzn0eqpw13drMbW4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTM2/Mzg1MjU0L3Bob3Rv/L3RyYWRpdGlvbi1u/b3J0aGVybi10aGFp/LWZvb2Qtb24tYS13/b29kZW4tdGFibGUt/dG9wLXZpZXcuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPXBC/SHJnTmJ4dTh0UTdF/Qm9XempGVDEyaE1n/a2Z4c3VhQnh3cnZK/bWxJd3c9",
+      "https://imgs.search.brave.com/owebPZDENza2hkKgBlAzR3qA2LY9y1m7EVr4jq6CZ8A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE5/Mjg2MjU1Ny9waG90/by9hc2lhbi13b21h/bi10YXN0aW5nLXRo/YWktZm9vZC1pbi10/aGUtcmVzdGF1cmFu/dC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9SzJ4eE50SHdN/MU9LSWFCWWJrUzBP/OFZDQnBmc0ZjOTVv/UTR3aGE2X29xYz0",
+      "https://imgs.search.brave.com/8mMR8ritjsZT0agqCbZRUVlHTRZsmGoUUdJdeBT5WrI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM0/MDk3Mjc5NC9waG90/by95b3VuZy13b21h/bi1oYXZpbmctYXV0/aGVudGljLXRoYWkt/Zm9vZC1pbi1sb2Nh/bC10aGFpLXN0cmVl/dC1mb29kLXN0YWxs/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1wcW54dUhZbTRM/WTlNVWtQMGdZa3Iy/TTdoRDNmV0FpbTc2/WDBsRHNqYnM0PQ",
+    ],
+    cuisines: ["Pad Thai", "Green Curry", "Tom Yum Soup"],
+    history:
+      "Thai cuisine balances sweet, sour, salty, and spicy flavours. It uses fresh herbs, coconut milk, and aromatic spices, making it vibrant and refreshing.",
+  },
+};

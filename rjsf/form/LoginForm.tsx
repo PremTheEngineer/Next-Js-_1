@@ -85,7 +85,7 @@ function LoginForm() {
           type="checkbox"
           id={id}
           checked={!!value}
-          required={required}
+          required={false}
           className="p-2 m-2"
           onChange={(e) => onChange(e.target.checked)}
         />
@@ -121,7 +121,7 @@ function LoginForm() {
       }
       // console.log("Submitting login form:", data);
       // router.refresh();
-      router.back();
+      router.back()
     },
     [],
   );
