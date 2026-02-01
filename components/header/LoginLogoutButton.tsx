@@ -9,12 +9,12 @@ export default function LoginLogoutButton() {
   const { user, logout } = useAuth();
 
   return (
-    <Button className="p-6 rounded-xl">
+    <div className="py-2 px-3 rounded-xl border-2 text-white bg-black border-neutral-900">
       {user ? (
         <button onClick={logout}>Logout</button>
       ) : (
         <Link href={LOGIN()}>Log in</Link>
       )}
-    </Button>
+    </div>
   );
 }

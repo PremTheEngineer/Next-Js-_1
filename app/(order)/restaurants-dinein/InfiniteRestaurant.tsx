@@ -34,9 +34,12 @@ function InfiniteRestaurant() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasNextPage]);
 
-
   if (isLoading) {
-    return <div className="m-16 font-bold text-center">We are loading restaurants for you...</div>;
+    return (
+      <div className="m-16 font-bold text-center">
+        We are loading restaurants for you...
+      </div>
+    );
   }
 
   return (

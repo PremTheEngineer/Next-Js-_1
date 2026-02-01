@@ -20,7 +20,7 @@ async function page(props: PageProps<"/food/cuisinesNearMe/[cuisine]">) {
         </h1>
       </div>
       <div className="text-center text-2xl font-bold m-4">Showing details about the selected cuisine.</div>
-      <div className="grid h-56 grid-cols-3 gap-4 overflow-hidden">
+      <div className="grid h-60 grid-cols-3 gap-4 overflow-hidden">
         {cuisineData.images.map((img, idx) => (
           <img
             key={idx}
